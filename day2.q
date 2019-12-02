@@ -3,6 +3,7 @@ input:"I"$"," vs first read0 `:d2.txt;
 //Loop over until 99 is seen
 //iterate positional each loop
 //functional apply change
+//Takes [x;y;z] of (input;noun;verb)
 d2p1:{
 	x[1]:y;
 	x[2]:z;
