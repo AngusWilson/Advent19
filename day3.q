@@ -37,7 +37,7 @@ genPositions:{
 //Get minimum sum positions in list of coordinates
 .d3.p2:{
     intersections:firstCoords inter lastCoords;
-    first min (where each firstCoords ~\:/: 1_intersections) + where each lastCoords ~\:/: 1_intersections
+    first min sum {(where each x ~\:/: 1_y)}[;intersections] each (firstCoords;lastCoords)
     }
 
 
