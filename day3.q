@@ -29,21 +29,19 @@ genPositions:{
 .d3.p1:{
     init[];
     
-    firstCoords:genPositions first wires;
-    lastCoords:genPositions last wires;
-    
-    min (sum each firstCoords inter lastCoords) except 0
+    wirePaths:genPositions each wires;
+
+    min (sum each (inter) . wirePaths) except 0
     }
 
 //Get minimum sum positions in list of coordinates
 .d3.p2:{
     init[];
     
-    firstCoords:genPositions first wires;
-    lastCoords:genPositions last wires;
+    wirePaths:genPositions each wires;
+    intersections:(inter) . wirePaths;
 
-    intersections:firstCoords inter lastCoords;
-    first min sum {(where each x ~\:/: 1_y)}[;intersections] each (firstCoords;lastCoords)
+    first min sum {(where each x ~\:/: 1_y)}[;intersections] each wirePaths
     }
 
 
