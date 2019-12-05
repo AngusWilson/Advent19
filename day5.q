@@ -61,8 +61,8 @@
      
     //Parse input, set initial values
     x:"I"$"," vs input;
-	i:0;
-	manualInput:5;
+    i:0;
+    manualInput:5;
     output:0;
     args:0;
     
