@@ -45,7 +45,7 @@
     
     
     //Loop over opperations until 99 code for termination.
-	while[not (9;9)~mode:-2#parameters:opSplit x i;
+    while[not (9;9)~mode:-2#parameters:opSplit x i;
         
         //pick out args, if op doesn't use them it doesn't matter
         opSet:x i+til opNumArgs[mode];
