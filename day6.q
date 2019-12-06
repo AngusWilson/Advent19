@@ -18,6 +18,5 @@ orbitMap:{(!) . reverse flip  `$")" vs/: input}
 //lookup position in each list and sum
 //-2 to account for empty keys at end of orbTrees
 .d6.p2:{
-    orbTrees:({orbits x}\)each `YOU`SAN;
-    -2+sum {x?y}[;first (inter) . orbTrees] each orbTrees
+    -2+sum {x?y}[;first (inter) . orbTrees] each orbTrees:(orbits\)each `YOU`SAN
     }
