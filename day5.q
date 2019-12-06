@@ -52,7 +52,7 @@
         args:(posIm -1_ reverse -2_parameters).' enlist[x],/: enlist each opSet 1 2;
       
         //Execute opperation, capture out
-	    out:.[op[mode];(x;i;manualInput;args)];
+	out:.[op[mode];(x;i;manualInput;args)];
         x:out 0;
         i:out 1;
         output:out 2;
