@@ -14,7 +14,7 @@
     //
     //Returns
     //Overall list, or output, function dependent
-	op:(!) . flip (
+    op:(!) . flip (
         //1 - sum the args
         ((0;1);{[x;i;y;z] (@[x;x i+3;:;sum z];i+4;y)});
         //2 - multiply the args
