@@ -13,7 +13,7 @@ intcode:{[x;i;userInputs];
     args:0;
     .rel.base:0;
 
-    x:raze x,(max x)#0;
+    x:raze x,(2000)#0;
     
     //Each opperation takes:
     //x - full list
@@ -73,27 +73,19 @@ intcode:{[x;i;userInputs];
             position:@[posImSave[(2_reverse parameters) p-1];opSet p];
             /show position;
             ];
-        /show .rel.base;
-        /show opSet;
-       / show args;
+      
         //Execute opperation, capture out
         out:.[op[mode];(x;i;manualInput;args;position)];
             x:out 0;
             i:out 1;
             output:out 2;
-        /show .rel.base;
+       
         //If we have an output, return full system state
         if[mode~(0;4);
-            /show"out";
             show output;
-            /show"hit a 4 - returning output";
             /:(x;i;output);
             ];
-         /show"____";  
-        /if[mode~(0;3);
-            /show"hit a 3 - inputing",string manualInput;
-            /manualInput:userInputs 1;
-            /];
+
         /show x;
         ];
     :(`halt;output)
