@@ -65,3 +65,25 @@ input:("#.#....#.#......#.....#......####.";
     
     .d10.p1[]
     .d10.p2[]
+
+
+
+//A little bit of code to play about with to animate the lazer
+/full:update absolute:relative+\:\:stationCoords from t
+
+/`list set reverse each exec absolute from full
+
+
+/`stationCoords set stationCoords
+
+
+/vis:{
+/    .aoc.image:.[ssr[;".";" "]each input ;reverse stationCoords;:;"0"]
+/    {
+/        show .aoc.image:.[.aoc.image;reverse x;:;"X"];
+/        .aoc.image::.[.aoc.image;reverse x;:;" "];
+/        system"sleep 0.05";
+/        } each (raze flip list[;til max count each list ]) except enlist `long$();
+/    }
+
+/vis[]
