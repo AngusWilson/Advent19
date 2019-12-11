@@ -142,10 +142,6 @@ intcode:{[x;i;userInputs];
         /draw colourTab;
         ];
 
-    lastOut`e
-    }    
-
-
 
 .d11.p1:select count distinct position from colourTab
 
